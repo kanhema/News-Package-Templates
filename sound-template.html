@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="soundmanger/soundmanager2-nodebug-jsmin.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		#container img{display:block; float:left; margin:5px;}
+	</style>
+	<script type="text/javascript" charset="utf-8">
+	
+		//Use this template to setup the sounds for sound manager
+		soundManager.setup({
+			url:"soundmanager",
+			onready:function(){
+				
+				soundManager.createSound({
+				  id: 'guards',
+				  url: 'sounds/guards.mp3'
+				});
+				
+				soundManager.createSound({
+				  id: 'greghamilton',
+				  url: 'sounds/greghamilton.mp3'
+				});
+				
+			}
+		})
+		
+		$(document).ready(function($){
+
+			$('#guardaudio').click(function(){
+				soundManager.stop('greghamilton');
+				soundManager.play('guards');
+			})
+			
+			$('#greghamilton').click(function(){
+				soundManager.stop('guards');
+				soundManager.play('greghamilton');
+			})
+
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img src="http://placehold.it/200x100&amp;text=Guard+Audio" id="guardaudio" />
+		<img src="http://placehold.it/200x100&amp;text=Hamilton+Audio" id="greghamilton" />
+	</div>
+</body>
+</html>

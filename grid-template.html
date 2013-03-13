@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page Title</title>
+	<style type="text/css" media="screen">
+		#container{
+			width:620px;
+		}
+		#container img{
+			display:block;
+			float:left;
+			margin:2px;
+			cursor:pointer;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		jQuery(document).ready(function($){
+
+				$('img').hover(function(){
+					$(this).stop().animate({'opacity': 0.5}, 300);
+				}, function(){
+					$(this).stop().animate({'opacity': 1}, 300);
+				});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img src="http://lorempixel.com/g/200/200/people/Picture-One" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Two" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Three" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Four" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Five" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Six" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Seven" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Eight" alt="random person" />
+		<img src="http://lorempixel.com/g/200/200/people/Picture-Nine" alt="random person" />
+	</div>
+</body>
+</html>
